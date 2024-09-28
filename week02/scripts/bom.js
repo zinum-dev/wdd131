@@ -2,17 +2,7 @@ const input = document.getElementById("favchap");
 const button = document.querySelector("button");
 const list = document.getElementById("list");
 
-
-
-
-
-
-
-
-
-
 button.addEventListener("click",function(){
-    console.log(input.value)
     if(input.value.trim() !== ''){
         const li = document.createElement('li');
         li.textContent = input.value;
