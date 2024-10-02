@@ -1,3 +1,11 @@
+:root{
+    --nav-color: white;    
+    --nav-hover-color: black;    
+
+    --background-color: blueviolet;
+    --nav-hover-background-color: blanchedalmond;    
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +13,10 @@
     font-family: Roboto, Sans-serif;
 }
 header {
-    background-color: blueviolet;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--nav-color);
     padding: 1rem;
 }
 
@@ -20,6 +28,7 @@ main {
 }
 
 h2 {
+    margin: 2rem;
     text-align: center;
 }
 
@@ -33,9 +42,9 @@ figcaption {
 
 footer{
     text-align: center;
-    background-color: blueviolet;
+    background-color: var(--background-color);
     padding: 10px;
-    color: white;
+    color: var(--nav-color);
 }
 
 
@@ -43,7 +52,7 @@ footer{
     font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: #FFF;
+	color: var(--nav-color);
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -65,7 +74,7 @@ footer{
 
 .navigation a{
     padding: 1rem 1rem;
-    color: white;
+    color: var(--nav-color);
     font-size: larger;
     text-decoration: none;
     text-align: center;
@@ -73,8 +82,8 @@ footer{
 }
 
 .navigation a:hover{
-    background-color: blanchedalmond;
-    color: black;
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-color);
     text-decoration: underline;
     
 }
