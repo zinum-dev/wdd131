@@ -26,12 +26,12 @@
     <main>
       <div class="hero">
         <picture>
-          <source media="(ma: )" srcset="">
-          <source media="(min-width: )" srcset="">
-          <img src="images/place/brazil-mobile.webp" alt="">
+          <source srcset="images/place/urca-large.webp" media="(min-width: 400px)">
+          <img src="images/place/brazil-mobile.webp" alt="Rio de Janeiro, Brazil">
         </picture>
+
       </div>
-      <div class="card">
+      <div id="data" class="card">
         <h2>Data</h2>
         <div class="tuple">
           <label>Area:</label>
@@ -66,9 +66,11 @@
           <p>.br</p>
         </div>
       </div>
-      <div class="card">
-        <h2>Weather</h2>
-        <img src="images/place/weather_clouds_sun_sunny_icon.svg" alt="sunny Icon" width="80">
+      <div id="weather" class="card">
+        <div class="weather-header">
+          <h2>Weather</h2>
+          <img src="images/place/weather_clouds_sun_sunny_icon.svg" alt="sunny Icon" width="80">
+        </div>
         <div class="tuple">
         <label>Temperature:</label>
         <p id="temperature"></p>

@@ -1,21 +1,65 @@
-@media (min-width: 780px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    
-    .navigation {
-        justify-content: flex-end;
-        flex-direction: row;
-    }
-    
-    .navigation a{
-        padding-inline: 1rem;
-        display: block;
+@media (min-width: 770px) {
+
+
+    main {
+        margin: auto;
+     
     }
 
-    #menu {
-		display: none; 
-	}
+    #data{
+        padding-top: 5rem;
+        position: absolute;
+        top: 5rem;
+        left: 10px;
+        background-color: var(--background-color-transparence);
+    }
+
+    #data h2{
+        margin: 10px;
+        padding: 10px;
+        width: 90%;
+        text-align: start;
+        position: absolute; /* Position relative to #data */
+        top: 0;
+        left: -20px;
+        align-self: start;
+        color: var(--nav-color);
+        background-color: var(--background-color);
+    }
+
+    #weather{
+        padding-top: 5rem;
+        position: absolute;
+        top: 23rem;
+        right: 10px;
+        background-color: var(--background-color-transparence);
+    }
+
+    .weather-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        background-color: var(--background-color);
+        width: 90%;
+        position: absolute;
+        margin: 10px;
+        left: -20px;
+        top: 0;
+    }
+
+    #weather h2{
+        margin: 0;
+        padding: 10px;
+        color: var(--nav-color);
+    }
+
+    #weather h2::after{
+        content: " ⛅";
+        padding-left: 20px;
+    }
+
+    #weather img{
+        display: none
+    }
 }
