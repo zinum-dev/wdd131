@@ -78,7 +78,30 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Add more temple objects here...
+  {
+    templeName: "Rio de Janeiro Brazil",
+    location: "Rio de Janeiro, Brazil",
+    dedicated: "2022, May, 8",
+    area: 1,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rio-de-janeiro-brazil/400x250/6-743652dbbf1ab19966da7eb3c7570d08cfc3ab8b.jpeg"
+  },
+  {
+    templeName: "Curitiba Brazil",
+    location: "Curitiba, Brazil",
+    dedicated: "2008, June, 1",
+    area: 1,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/curitiba-brazil/400x250/curitiba-brazil-temple-lds-852263-wallpaper.jpg"
+  },
+  {
+    templeName: "Rome Italy",
+    location: "Rome, Italy",
+    dedicated: "2019, March, 10",
+    area: 1,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/6-Rome-Temple-2160338.jpg"
+  },
 ];
 
 
@@ -97,8 +120,16 @@ function createTempleCard(filteredTemples = temples){
     name.textContent = temple.templeName;
     location.textContent = `Location: ${temple.location}`;
     dedicated.textContent = `Dedicated: ${temple.dedicated}`;
-    area.textContent = `Size: ${temple.area} sq. ft.`
+    area.textContent = `Size: ${temple.area} sq. ft.`;
+    img.setAttribute("src", temple.imageUrl)
     
+    templeCard.appendChild(name);
+    templeCard.appendChild(location);
+    templeCard.appendChild(dedicated);
+    templeCard.appendChild(area);
+    templeCard.appendChild(img);
+
+    document.querySelector(".album").appendChild(templeCard)
     
   })
 
