@@ -82,7 +82,7 @@ const temples = [
     templeName: "Rio de Janeiro Brazil",
     location: "Rio de Janeiro, Brazil",
     dedicated: "2022, May, 8",
-    area: 1,
+    area: 29966,
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rio-de-janeiro-brazil/400x250/6-743652dbbf1ab19966da7eb3c7570d08cfc3ab8b.jpeg"
   },
@@ -90,7 +90,7 @@ const temples = [
     templeName: "Curitiba Brazil",
     location: "Curitiba, Brazil",
     dedicated: "2008, June, 1",
-    area: 1,
+    area: 27850,
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/curitiba-brazil/400x250/curitiba-brazil-temple-lds-852263-wallpaper.jpg"
   },
@@ -98,16 +98,60 @@ const temples = [
     templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
-    area: 1,
+    area: 41010,
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/6-Rome-Temple-2160338.jpg"
   },
 ];
 
+createTempleCard(temples);
 
-createTempleCard();
+/*
+Old - temples built before 1900
+New - temples built after 2000
+Large - temples larger than 90000 square feet
+Small - temples smaller than 10000 square feet
+Home - displays all the temples stored in the array.
+*/
+const oldLink = document.querySelector('#old');
+const newLink = document.querySelector('#new');
+const largeLink = document.querySelector('#large');
+const smallLink = document.querySelector('#small');
+const homeLink = document.querySelector('#home');
 
-function createTempleCard(filteredTemples = temples){
+
+oldLink.addEventListener("click", () => {
+    const filteredTemples = temples.filter((temple) => {
+    const year = parseInt(temple.dedicated.split(",")[0].trim());
+    return year < 1900
+  });
+  createTempleCard(filteredTemples);
+});
+
+newLink.addEventListener("click", () => {
+  const filteredTemples = temples.filter((temple) => {
+    const year = parseInt(temple.dedicated.split(",")[0].trim());
+    return year > 2000
+  });
+  createTempleCard(filteredTemples);
+});
+
+largeLink.addEventListener("click", () => {
+  let filteredTemples = temples.filter(temple => temple.area > 90000)
+  createTempleCard(filteredTemples);
+});
+
+smallLink.addEventListener("click", () => {
+  let filteredTemples = temples.filter(temple => temple.area < 10000)
+  createTempleCard(filteredTemples);
+});
+
+homeLink.addEventListener("click", () => {
+  createTempleCard(temples);
+});
+
+function createTempleCard(filteredTemples){
+  document.querySelector(".album").innerHTML = ""
   filteredTemples.forEach(temple => {
     let templeCard = document.createElement('div');
     let name = document.createElement('h3');
@@ -122,6 +166,8 @@ function createTempleCard(filteredTemples = temples){
     dedicated.textContent = `Dedicated: ${temple.dedicated}`;
     area.textContent = `Size: ${temple.area} sq. ft.`;
     img.setAttribute("src", temple.imageUrl)
+    img.setAttribute("alt", `${temple.name} Temple`)
+    img.setAttribute("loading", "lazy")
     
     templeCard.appendChild(name);
     templeCard.appendChild(location);
@@ -132,6 +178,4 @@ function createTempleCard(filteredTemples = temples){
     document.querySelector(".album").appendChild(templeCard)
     
   })
-
-
 }
