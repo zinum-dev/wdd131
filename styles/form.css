@@ -104,3 +104,7 @@ main {
     margin: 1rem auto;
     max-width: 800px;
 }
+
+section{
+    padding: 2rem;
+}
