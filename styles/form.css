@@ -34,8 +34,11 @@ form {
     padding-top: 1rem;
 }
 
+.formreview div {
+    padding-top: 1rem;
+}
+
 .formreview input[type="text"],
-.formreview input[type="radio"],
 .formreview input[type="date"],
 .formreview select
  {
@@ -54,23 +57,30 @@ form {
     justify-content: space-around;
     width: 100%;
     max-width: 400px;
+    padding-top: 0% !important;
 }
 
 .rating label{
     padding: 0%;
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column;   
 }
-
 
 .formreview input[type="checkbox"] {
     margin-right: 6px;
+    padding-top: 0% !important;
 }
 
 .formreview textarea {
     display: block;
-    padding-top: 1rem;
+    padding: .5rem;
+    width: 100%;
+    border-radius: var(--radius);
+    max-width: 400px;
+}
+
+.formreview span {
+    color: blue;
 }
 
 .formreview input[type="submit"]{
@@ -82,26 +92,6 @@ form {
 
 }
 
-
-
-main {
-    margin: 1rem auto;
-    max-width: 800px;
-}
-
-h2 {
-    margin: 2rem;
-    text-align: center;
-}
-
-
-img { width: 100%; height: auto; margin: .5rem;}
-
-
-figcaption {
-    text-align: center;
-}
-
 footer{
     text-align: center;
     background-color: var(--background-color);
@@ -110,53 +100,7 @@ footer{
 }
 
 
-#menu {
-    font-size: 1.5rem;
-	border: 0;
-	background: none;
-	color: var(--nav-color);
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-}
-
-#menu::before {
-	content: "☰";
-}
-
-#menu.open::before {
-	content: "❎";
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-.navigation a{
-    padding: 1rem 1rem;
-    color: var(--nav-color);
-    font-size: larger;
-    text-decoration: none;
-    text-align: center;
-    display: none;
-}
-
-.navigation a:hover{
-    background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-color);
-    text-decoration: underline;
-    
-}
-
-.open a {
-	display: block;
-}
-
-.album {
-    display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:1rem;
-    place-items: center;
+main {
+    margin: 1rem auto;
+    max-width: 800px;
 }
