@@ -42,7 +42,6 @@ form {
 .formreview input[type="date"],
 .formreview select
  {
-    background-color: aqua;
     display: block;
     padding: .75rem;
     border: 1px solid #ccc;
