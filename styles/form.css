@@ -32,8 +32,35 @@ form {
     padding-top: 1rem;
 }
 
+.formreview input[type="text"],
+.formreview input[type="radio"],
+.formreview select
+ {
+    background-color: aqua;
+    display: block;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rating label{
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 .formreview input[type="checkbox"] {
     margin-right: 6px;
+}
+
+.formreview textarea {
+    display: block;
+    padding-top: 1rem;
 }
 
 
