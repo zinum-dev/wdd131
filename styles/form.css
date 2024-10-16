@@ -4,6 +4,8 @@
 
     --background-color: blueviolet;
     --form-background-color: blanchedalmond;    
+
+    --radius: 10px
 }
 
 * {
@@ -34,16 +36,24 @@ form {
 
 .formreview input[type="text"],
 .formreview input[type="radio"],
+.formreview input[type="date"],
 .formreview select
  {
     background-color: aqua;
     display: block;
+    padding: .75rem;
+    border: 1 solid #ccc;
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 400px;
 }
 
 .rating {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
 }
 
 .rating label{
@@ -61,6 +71,15 @@ form {
 .formreview textarea {
     display: block;
     padding-top: 1rem;
+}
+
+.formreview input[type="submit"]{
+    width: 96%;
+    max-width: 400px;
+    padding: .75rem;
+    border-radius: var(--radius);
+    margin: 2rem 0%;
+
 }
 
 
