@@ -1,0 +1,116 @@
+:root{
+    --nav-color: white;    
+    --nav-hover-color: black;    
+
+    --background-color: blueviolet;
+    --form-background-color: blanchedalmond;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Sans-serif;
+}
+
+header {
+    background-color: var(--background-color);
+    text-align: center;
+    color: var(--nav-color);
+    padding: 1rem;
+}
+
+
+
+form {
+    background-color: var(--form-background-color) ;
+    padding: 1rem;
+}
+
+.formreview label {
+    display: block;
+    padding-top: 1rem;
+}
+
+.formreview input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+
+
+main {
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+h2 {
+    margin: 2rem;
+    text-align: center;
+}
+
+
+img { width: 100%; height: auto; margin: .5rem;}
+
+
+figcaption {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 10px;
+    color: var(--nav-color);
+}
+
+
+#menu {
+    font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: var(--nav-color);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.navigation a{
+    padding: 1rem 1rem;
+    color: var(--nav-color);
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+}
+
+.navigation a:hover{
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-color);
+    text-decoration: underline;
+    
+}
+
+.open a {
+	display: block;
+}
+
+.album {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:1rem;
+    place-items: center;
+}
