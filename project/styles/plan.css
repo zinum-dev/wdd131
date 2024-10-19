@@ -1,6 +1,5 @@
 :root{
     --primary:#00B3B3; /*Verdigris*/
-    
     --accent:#FF6F61; /*Coral*/
     --secondary-text:#90A4AE; /*Soft Gray*/
     --background:#121212; /*Very Dark Gray*/
@@ -13,6 +12,10 @@
     box-sizing: border-box;
 
 
+}
+header{
+    background-color: var(--primary);
+    text-align: center;
 }
 
 body {
