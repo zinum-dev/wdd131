@@ -1,5 +1,6 @@
 :root{
-    --primary:#008080; /*Teal*/
+    --primary:#00B3B3; /*Verdigris*/
+    
     --accent:#FF6F61; /*Coral*/
     --secondary-text:#90A4AE; /*Soft Gray*/
     --background:#121212; /*Very Dark Gray*/
@@ -40,20 +41,30 @@ li {
     text-align: end;
 }
 
+a {
+    color: var(--secondary-text);
+}
+
 div {
     margin:10px;
+    padding: .5rem;
+
 }
 div p {
     margin-left:20px;
 }
 
 #highlights{
-    background-color: var(--primary);
+    border-bottom:1px solid var(--primary);
+    
 }
 
 #accent-color:hover {
     background-color: var(--accent);
+    color: var(--background);
     border-radius: 6px;
+    padding: .5rem;
+
 }
 
 .circle {
@@ -97,6 +108,7 @@ div p {
     height: 30px;
     border-radius: 30px;
     cursor: zoom-in;
+    border: 2px solid var(--secondary-text);
 }
 
 #secondary-text {
