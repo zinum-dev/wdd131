@@ -29,6 +29,10 @@ form {
     padding: 1rem;
 }
 
+.required {
+    color: red !important;
+}
+
 .formreview label {
     display: block;
     padding-top: 1rem;

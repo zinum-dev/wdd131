@@ -50,11 +50,12 @@ products.forEach(p => {
 
 let formsSended = window.localStorage.getItem("forms") || 0
 
-//<input type="submit" value="Post Review">
-
+const form = document.querySelector('form');
 const submit = document.querySelector('input[type="submit"]')
 submit.addEventListener('click'  , () => {
-  formsSended++;
+  if(form.checkValidity()){
+    formsSended++;
+  }
   window.localStorage.setItem("forms", formsSended);
 });
 
