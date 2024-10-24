@@ -7,13 +7,14 @@
     <title>Zinum-Dev - André Muniz</title>
     <meta name="description" content="A webpage with personal portifolio for André Muniz">
     <meta name="author" content="André Muniz">
-    <link rel="stylesheet" href="styles/plan.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/portfolio-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
         rel="stylesheet">
-    <script src="scripts/place/place.js" defer></script>
+    <script src="scripts/portfolio.js" defer></script>
 </head>
 
 <body>
@@ -21,75 +22,44 @@
         <h1>Zinum-Dev</h1>
         <button type="button" id="menu"></button>
         <nav class="navigation">
-          <a href="/" id="home">Home</a>
-          <a href="#" id="old">Old</a>
-          <a href="#" id="new">New</a>
-          <a href="#" id="large">Large</a>
-          <a href="#" id="small">Small</a>
+          <a href="index.html" id="home">Home</a>
+          <a href="about.html" id="about">About</a>
+          <a href="skills.html" id="skills">Skills</a>
+          <a href="contact.html" id="contact">Contact</a>
+          
         </nav>
       </header>
     <main>
-
-
-        <h2>Site Name</h2>
-        <li><strong>Zinum-Dev</strong> is a coined name that reflects my identity as a developer driven by a passion for
-            crafting innovative solutions. This will be the brand through which I showcase my skills and projects,
-            representing my commitment to creativity and development.</li>
-        Domain available: <span id="domain">zinum.net</span>
-
-        <h2>Site Purpose</h2>
-        <li>The purpose of this personal portfolio website is to showcase my skills, experiences, and personal projects
-            to potential employers and clients. Through this platform, I aim to provide an overview of my technical
-            abilities, including programming languages, frameworks, and tools I am proficient in.</li>
-
-        <h2>Scenarios</h2>
-        <li>What soft skills you have?</li>
-        <li>What tecnical skills you have?</li>
-        <li>what is your education background?</li>
-        <li>can you show some projects?</li>
-        <li>How to contact you </li>
-
-
-        <h2>Color Schema</h2>
-
-        <p>Color Palette: <a href="https://coolors.co/00b3b3-ff6f61-90a4ae-121212-e0e0e0"
-                target="_blank">https://coolors.co</a></p>
-
-        <div id="primary-color">
-            <span> Primary Color: Verdigris (#00B3B3)</span><span class="circle" id="primary-color-span"></span><br>
-            <span>Usage: Headers, key <span id="highlights">highlights</span>, and primary elements.</span>
+        <div class="intro">
+            <h2>Welcome to my Life</h2>
+            <p>"I am passionate about coding and the infinite possibilities it offers. This passion allows me to express my creativity and explore new ideas."</p>
+            <img src="images/perfil.jpg" alt="Profile picture" width="250">
         </div>
-        <div id="accent-color">
-            <span>Accent Color: Coral (#FF6F61)</span><span class="circle" id="accent-color-span"></span><br>
-            <span>Usage: Call-to-action buttons, hover effects, and accents.</span>
-        </div>
-        <div id="secondary-text">
-            <span>Secondary Text Color:Soft Gray (#90A4AE)</span><span class="circle"
-                id="secondary-text-span"></span><br>
-            <span>Usage: Secondary text, borders, and subtle background elements.</span>
-        </div>
-        <div id="background-color">
-            <span>Background Color: Very Dark Gray (#121212)</span><span class="circle"
-                id="background-color-span"></span><br>
-            <span>Usage: Main background, providing a modern, sleek look.</span>
-
-        </div>
-        <div id="typeface-color">
-            <span>Typeface Color: Light Gray (#E0E0E0)</span><span class="circle" id="typeface-color-span"></span><br>
-            <span>Usage: Main text for readability, ensuring clarity against the dark background.</span>
+        
+        <div class="breif">
+            <h2>Who am I</h2>
+            <p>Hi! My name is André Muniz, and I'm from Rio de Janeiro, Brazil. I'm a computer scientist specializing in web development with Angular, Java, and cloud development using AWS (Amazon Web Services). I'm married, and we are eagerly awaiting the arrival of our first child 💕. Yes, we're pregnant! It's been a challenging but wonderful time. I enjoy spending time with my family, watching movies, playing video games, and of course, coding 💻.</p>
         </div>
 
+        <div class="location">
+            <h2>Location</h2>
+            <p>I'm in Brazil and willing to travel the world, working remotely from anywhere</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d83142.64463480703!2d-43.208194885887245!3d-22.934190818597514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sbr!4v1729726465923!5m2!1spt-PT!2sbr" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-        <h2>Typography</h2>
-        <p>Font Family: <strong>Roboto Mono</strong></p>
-
-        <h2>WireFrame</h2>
-        <p>
-            <a href="https://app.moqups.com/6gWbWYvkz2lQQTj8AtkDjKTBYbU6SFEt/view/page/a92ff13b0" target="_blank" rel="noopener noreferrer">Mobile</a>
-        </p>
-        <p>
-            <a href="https://app.moqups.com/6gWbWYvkz2lQQTj8AtkDjKTBYbU6SFEt/view/page/a710457bf" target="_blank" rel="noopener noreferrer">Desktop</a>
-        </p>
+        <div class="certificates">
+            <h2>Certificates</h2>
+            <div class="gallery">
+                <div >
+                    <img src="images/pathway.jpeg" alt="BYU - Pathway worldwide">
+                    <p>PathwayConnect, a program teaching life, professional, and student skills with an emphasis on writing and mathematics</p>
+                </div>
+                <div>
+                    <img src="images/ufrj.png" alt="Federal University of Rio de Janeiro">
+                    <p>Bachelor in Computer Science (2023) <br>Where I developed a solid foundation in programming, algorithms, and software development.</p>
+                </div>
+            </div>
+        </div>
         
 
     </main>

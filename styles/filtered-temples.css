@@ -79,6 +79,7 @@ footer{
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
     text-decoration: underline;
+    font-weight: 700;
     
 }
 
