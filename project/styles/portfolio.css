@@ -135,6 +135,7 @@ h2 {
 
 .certificates p{
     text-align: center;
+    padding: 1rem;
 }
 
 .gallery {
@@ -146,6 +147,7 @@ h2 {
     height: 175px;
     border-radius: 50%;
     align-self: center;
+    padding: .25rem;
 }
 
 .gallery div{
@@ -221,96 +223,42 @@ form {
     font-family: Roboto Mono, monospace;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#domain {
-    color: var(--secondary-text);
-    text-decoration: underline;
-    text-align: end;
+.skills {
+    margin: 0 1rem 0 3rem;
 }
 
-a {
-    color: var(--secondary-text);
+.skills strong{
+    display: block;
+    padding-top: 1rem;
 }
 
-
-#highlights{
-    border-bottom:1px solid var(--primary);
-    
+.skills li::marker, .about li::marker{
+    color: var(--accent); /* Change to your desired color */    
 }
 
-#accent-color:hover {
-    background-color: var(--accent);
-    color: var(--background);
-    border-radius: 6px;
-    padding: .5rem;
-
+.skills ul {
+    list-style: hangul
 }
 
-.circle {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    margin-left: 0.5rem;
-    vertical-align: middle;
+ .about {
+    margin: 0 1.5rem;
 }
 
-#primary-color-span {
-    background-color: var(--primary);
+#presentation {
+    margin: 2rem 0;
+    border-bottom: 1px solid var(--accent);
 }
 
-
-#accent-color-span {
-    background-color: var(--accent);
+.about li {
+    margin-left: 1.5rem;
+    padding-top: 1rem;
 }
 
-
-#background-color-span{
-    border: 1px solid var(--typeface);
-    background-color: var(--background);
+.about h3 {
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--accent);
 }
 
-
-#typeface-color-span
- {
-    background-color: var(--typeface);
-}
-
-
-#secondary-text-span {
-    background-color: var(--secondary-text);
-}
-
-.circle:hover {
-    width: 50px;
-    height: 30px;
-    border-radius: 30px;
-    cursor: zoom-in;
-    border: 2px solid var(--secondary-text);
-}
-
-#secondary-text {
-    padding: .5rem;
-    border: 1px solid var(--secondary-text);
-    border-radius: 6px;
-}
 
 footer{
     margin-top: 2rem;
