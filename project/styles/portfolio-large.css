@@ -39,4 +39,9 @@
         align-self: start;
     }
 
+    #contacttitle{
+        text-align: start;
+        margin-left: 2rem;
+    }
+
 }

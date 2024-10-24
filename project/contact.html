@@ -23,17 +23,30 @@
         <button type="button" id="menu"></button>
         <nav class="navigation">
           <a href="index.html" id="home">Home</a>
-          <a href="about.html" id="about">About</a>
           <a href="skills.html" id="skills">Skills</a>
           <a href="contact.html" id="contact">Contact</a>
           
         </nav>
       </header>
     <main>
-        <h2>Contact me</h2>
-        <form action="">
-            <label for="name">Name:<input type="text" name="name" id="name"></label> 
-            <label for="emal">Email<input type="email" name="email" id="email"></label>
+        <h2 id="contacttitle">Contact me</h2>
+        <form action="" method="get" class="contactform">
+            <label>Name <span class="required">*</span><input type="text" name="name" id="name" required></label> 
+            <label for="emal">Email <span class="required">*</span><input type="email" name="email" id="email" required></label>
+            <label>Cel<input type="tel" name="tel"></label>
+            <div id="preferencelabel">
+                Contact preference
+            </div>
+            <div class="preference">
+                <label><input type="radio" name="contactpreference" id="contactemail" value="1">E-mail</label>
+                <label><input type="radio" name="contactpreference" id="contacttel" value="2">SMS</label>
+                <label><input type="radio" name="contactpreference" id="contactwhatsapp" value="3">WhatsApp</label>
+            </div>
+
+            <label for="message">Message<textarea name="message" id="message"></textarea></label>
+
+            <input type="submit" value="Contact me">
+
         </form>
  
 
