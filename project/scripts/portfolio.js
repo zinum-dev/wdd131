@@ -49,6 +49,7 @@ function newCertificate(cert, certificatesDiv) {
   const img = document.createElement("img");
   img.src = cert.src;
   img.alt = cert.alt;
+  img.loading = 'lazy';
   certDiv.appendChild(img);
 
   const paragraph = document.createElement("p");
