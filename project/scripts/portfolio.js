@@ -21,28 +21,38 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
+const certificates = [
+  {
+    src :"images/pathway.webp",
+    alt: "BYU - Pathway Worldwide",
+    description: "PathwayConnect, a program teaching life, professional, and student skills with an emphasis on writing and mathematics."
+  },
+  {
+    src :"images/ufrj.webp",
+    alt: "Federal University of Rio de Janeiro",
+    description: "Bachelor in Computer Science (2023). Where I developed a solid foundation in programming, algorithms, and software development."
+  }
+];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const galleryItems = document.querySelectorAll('.gallery div');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxCaption = document.getElementById('caption');
-
-  galleryItems.forEach(item => {
-      const img = item.querySelector('img');
-      const caption = item.querySelector('p').textContent;
-
-      // Add click event to each image
-      img.addEventListener('click', () => {
-          lightboxImg.src = img.src;
-          lightboxCaption.textContent = caption;
-          lightbox.style.display = 'block';
-      });
+function displayCertificates() {
+  const certificatesDiv = document.getElementById("certificates");
+  certificates.forEach(cert => {
+    newCertificate(cert, certificatesDiv);
   });
+}
 
-  // Close lightbox functionality
-  const closeBtn = document.querySelector('.close');
-  closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-  });
-});
+function newCertificate(cert, certificatesDiv) {
+  const certDiv = document.createElement("div");
+
+  const img = document.createElement("img");
+  img.src = cert.src;
+  img.alt = cert.alt;
+  certDiv.appendChild(img);
+
+  const paragraph = document.createElement("p");
+  paragraph.textContent = cert.description;
+  certDiv.appendChild(paragraph);
+  certificatesDiv.appendChild(certDiv);
+}
+
+displayCertificates();
