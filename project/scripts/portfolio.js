@@ -36,6 +36,8 @@ const certificates = [
 
 function displayCertificates() {
   const certificatesDiv = document.getElementById("certificates");
+  if (!certificatesDiv) return; 
+
   certificates.forEach(cert => {
     newCertificate(cert, certificatesDiv);
   });
@@ -56,3 +58,35 @@ function newCertificate(cert, certificatesDiv) {
 }
 
 displayCertificates();
+
+let contactArray = getContactList() || [];
+
+function getContactList(){
+  return JSON.parse(window.localStorage.getItem("contactList"));
+}
+
+function setContactList(){
+  window.localStorage.setItem("contactList", JSON.stringify(contactArray));
+}
+
+
+const submit = document.querySelector('input[type="submit"]')
+const form = document.querySelector('form');
+if (submit && form) {
+  submit.addEventListener('click'  , (event) => {
+    console.log(event)
+    if(form.checkValidity()){
+      const formData = new FormData(form);
+      const formObject = Object.fromEntries(formData.entries());
+      contactArray.push(formObject);
+      setContactList();
+      alert("Thanks for sumbitting your contact info.");
+
+    }
+    else {
+      alert("Invalid Form, please fill the required fields.")
+    }
+  });
+
+}
+
